@@ -1,13 +1,26 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.polka {
+  background-image: 
+    radial-gradient(rgb(245, 219, 226) 10.4%, transparent 11.2%),
+    radial-gradient(rgb(190, 194, 115) 10.4%, transparent 11.2%);
+  background-position: 104px 104px, 93.6px 114.4px;
+  background-size: 208px 208px;
+  background-color: rgb(47, 114, 251);
+}
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: conic-gradient(#a2171700 10%, #f0f1fd);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+  animation: spinner-zp9dbg 1s infinite linear;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@keyframes spinner-zp9dbg {
+  to {
+    transform: rotate(1turn);
+  }
 }
